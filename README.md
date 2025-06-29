@@ -30,7 +30,9 @@ To prepare the data required for training or testing the model follow the next s
 
 5. We have produced this project as a part of the research project "**Early Fadigue Detection using Wearables as a means for the Reduction of Critical Accidents in the Mining Process**", which was developed by a team of our lab during our participation in the AI League of the 2025 [Pan-African Robotics Competition](https://parcrobotics.org/).
 
-6. We've used the data for the creation of a **LSTM Fatigue Detection Classifier Meta Learning Model** using the concepts presented in the study [3], and as resulted in the [following notebook](https://www.kaggle.com/code/anaxmenobrito/fatiguelstmclassifier-m-o-c-a).
+6. We've used the data for the creation of a **LSTM Fatigue Detection Classifier Meta Learning Model** using the concepts presented in the study [3], which resulted in the [following notebook](https://www.kaggle.com/code/anaxmenobrito/fatiguelstmclassifier-m-o-c-a).
+
+7. We also have a Kaggle Dataset with the processed data, which can be found [here](https://www.kaggle.com/datasets/anaxmenobrito/fatigueset-pre-processed).
 
 
 ## References
