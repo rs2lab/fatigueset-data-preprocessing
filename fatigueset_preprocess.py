@@ -148,8 +148,8 @@ def get_user_fatigue_median(user_dir: str) -> float:
     Args:
         user_dir: path to the user directory
     """
-    user_data_01 = pd.read_csv(f"{user_dir}/01/exp_fatigue.csv")
-    user_data_03 = pd.read_csv(f"{user_dir}/03/exp_fatigue.csv")
+    user_data_01 = pd.read_csv(os.path.join(user_dir, "01", "exp_fatigue.csv"))
+    user_data_03 = pd.read_csv(os.path.join(user_dir, "03", "exp_fatigue.csv"))
     uu = pd.concat([user_data_01, user_data_03], axis=0)
     return uu['mentalFatigueScore'].median()
 
@@ -165,6 +165,7 @@ def process_session(user_path: str, session_id: str, window_secs: int, fatigue_m
         fatigue_median: median of the psychological fatigue scores
         data_save_dir: path to save the data
     """
+    # TODO: needs to better adapt for windows
     uid = user_path.rstrip('/').split('/')[-1]
     try:
         session_data = load_user_data_with_psycho_fatigue(
@@ -176,6 +177,8 @@ def process_session(user_path: str, session_id: str, window_secs: int, fatigue_m
         file_path = os.path.join(data_save_dir, f'{uid}_{session_id}.csv')
         session_data.to_csv(file_path, index=False)
         print(f"Saved {file_path}")
+    except KeyboardInterrupt as e:
+        raise
     except Exception as e:
         print(f"Error processing {user_path} {session_id}: {e}")
 
