@@ -1,8 +1,14 @@
 # FatigueSet Data Processing
 
-To prepare the data required for training or testing the model follow the next steps:
+This repository contains the code used to preprocess the [FatigueSet dataset](https://sensix.tech/datasets/fatigueset/fatigueset.zip) that comes from the study [1], and was produced as a part of the research project "**Early Fadigue Detection using Wearables as a means for the Reduction of Critical Accidents in the Mining Process**", which was developed by a team of our lab during our participation in the AI League of the 2025 [Pan-African Robotics Competition](https://parcrobotics.org/).
 
-1. Dowload the fatigueset dataset from it's repository:
+The data preprocessing steps tries to follow most of the steps presented in the study [2], but with some modifications according to our needs.
+
+The preprocessed data can be found [here](https://www.kaggle.com/datasets/anaxmenobrito/fatigueset-pre-processed) and has resulted in the [following notebook](https://www.kaggle.com/code/anaxmenobrito/fatiguelstmclassifier-m-o-c-a) in which we used the preprocessed data to create a ***LSTM Fatigue Detection Classifier Meta Learning Model*** using the concepts of "***Continuous Meta-Learning without Tasks***" presented in the study [3].
+
+## How to use
+
+1. Download the fatigueset dataset from it's repository:
 
     ```bash
     curl https://sensix.tech/datasets/fatigueset/fatigueset.zip
@@ -33,12 +39,6 @@ To prepare the data required for training or testing the model follow the next s
 4. After running the script following the last intruction, there should be available a folder inside the `processed/` folder containing data of a time window relative to the folder name, for the case above it should be `processed/5s/` (if ran without changes) for example.
 
 5. Don't be afraid to create an issue if you have suggestions to improve the data preprocessing process.
-
-6. We have produced this project as a part of the research project "**Early Fadigue Detection using Wearables as a means for the Reduction of Critical Accidents in the Mining Process**", which was developed by a team of our lab during our participation in the AI League of the 2025 [Pan-African Robotics Competition](https://parcrobotics.org/).
-
-7. We've used the data for the creation of a **LSTM Fatigue Detection Classifier Meta Learning Model** using the concepts presented in the study [3], which resulted in the [following notebook](https://www.kaggle.com/code/anaxmenobrito/fatiguelstmclassifier-m-o-c-a).
-
-8. We also have a Kaggle Dataset with the processed data, which can be found [here](https://www.kaggle.com/datasets/anaxmenobrito/fatigueset-pre-processed).
 
 
 ## References
