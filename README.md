@@ -26,10 +26,10 @@ The preprocessed data can be found [here](https://www.kaggle.com/datasets/anaxme
     pip install -r requirements.txt
     ```
 
-3. Pre-process the dataset data using the `prepare_data.py` script we created:
+3. Pre-process the dataset data using the `fatigueset_preprocess.py` script we created:
 
     ```bash
-    python prepare_data.py --data_path=fatigueset --window_secs=5 --data_save_dir=processed --num_cores=4
+    python fatigueset_preprocess.py --data_path=fatigueset --window_secs=5 --data_save_dir=processed --num_cores=4
     ```
 
     3.1. Adjust the `--window_secs=5` according to the time window you want to be used to accumulate and calculate statiscal data regarding the values in each time window from start to the end of the recorded data.
